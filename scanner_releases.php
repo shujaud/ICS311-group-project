@@ -1,8 +1,8 @@
 <?php
 
-  $nav_selected = "SCANNER"; 
-  $left_buttons = "YES"; 
-  $left_selected = "RELEASES"; 
+  $nav_selected = "MOVIES"; 
+  $left_buttons = "NO"; 
+  $left_selected = ""; 
 
   include("./nav.php");
   global $db;
@@ -22,33 +22,17 @@
             width="100%" style="width: 100px;">
               <thead>
                 <tr id="table-first-row">
-                        <th>id</th>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Open Date</th>
-                        <th>Dependency Date</th>
-                        <th>Content Date</th>
-                        <th>RTM Date(s)</th>
-                        <th>Manager</th>
-                        <th>Author</th>
-                        <th>BOM ID</th>
+                        <th>Movie Name</th>
+                        <th>Movie Name in English</th>
+                        <th>Year Made</th>
                 </tr>
               </thead>
 
               <tfoot>
                 <tr>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                        <th>Open Date</th>
-                        <th>Dependency Date</th>
-                        <th>Content Date</th>
-                        <th>RTM Date(s)</th>
-                        <th>Manager</th>
-                        <th>Author</th>
-                        <th>BOM ID</th>
+                        <th>Movie Name</th>
+                        <th>Movie Name in English</th>
+                        <th>Year Made</th>
                 </tr>
               </tfoot>
 
@@ -56,24 +40,16 @@
 
               <?php
 
-$sql = "SELECT * from releases ORDER BY rtm_date ASC;";
+$sql = "SELECT * from `movies` ORDER BY `Year Made` ASC;";
 $result = $db->query($sql);
 
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo '<tr>
-                                <td>'.$row["id"].'</td>
-                                <td>'.$row["name"].' </span> </td>
-                                <td>'.$row["type"].'</td>
-                                <td>'.$row["status"].'</td>
-                                <td>'.$row["open_date"].' </span> </td>
-                                <td>'.$row["dependency_date"].'</td>
-                                <td>'.$row["freeze_date"].'</td>
-                                <td>'.$row["rtm_date"].' </span> </td>
-                                <td>'.$row["manager"].' </span> </td>
-                                <td>'.$row["author"].' </span> </td>
-                                <td>'.$row["app_id"].' </span> </td>
+                                <td>'.$row["Movie Name"].'</td>
+                                <td>'.$row["Movie Name in English"].' </span> </td>
+                                <td>'.$row["Year Made"].'</td>
                             </tr>';
                     }//end while
                 }//end if

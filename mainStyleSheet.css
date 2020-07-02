@@ -28,12 +28,13 @@ a {
     width: 100%;
     padding: 5px 0 0 0;
     margin: 0 auto;
-    display: block;
+    display: grid;
     clear: both;
     /*border-bottom: 3px solid #1B5BA0;*/
     height: 90px;
     background-color: #ffffff;
     margin-bottom: 5px;
+    align-content: center;
 }
 #nav ul a:hover {
   /*color: #1B5BA0;*/
@@ -463,4 +464,8 @@ a {
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
+}
+
+.multimedia {
+  max-width: 100%;
 }
