@@ -7,6 +7,12 @@
   	<br/>Movie List<br/></div>
   </a>
 
+  <a href="movie_data.php">
+  	<div <?php if($left_selected == "MOVIE_DATA")
+  	{ echo 'class="menu-left-current-page"'; } ?>>
+  	<img src="./images/movies_data.png" title="Icons made by mynamepong from www.flaticon.com">
+  	<br/>Movies Data<br/></div>
+  </a>
 
   <a href="create_movie.php">
   	<div <?php if($left_selected == "CREATE_MOVIE")

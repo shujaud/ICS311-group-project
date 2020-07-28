@@ -7,6 +7,12 @@
   	<br/>Song List<br/></div>
   </a>
 
+  <a href="song_data.php">
+  	<div <?php if($left_selected == "SONG_DATA")
+  	{ echo 'class="menu-left-current-page"'; } ?>>
+  	<img src="./images/movies_data.png" title="Icons made by mynamepong from www.flaticon.com">
+  	<br/>Songs Data<br/></div>
+  </a>
 
   <a href="create_song.php">
   	<div <?php if($left_selected == "CREATE_SONG")
