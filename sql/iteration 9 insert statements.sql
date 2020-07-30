@@ -1,4 +1,4 @@
-INSERT INTO `movies` (`movie_id`, `native_name`, `english_name`, `year_made`) VALUES (NULL, 'Alien', 'Alien', '1979');
+INSERT INTO `movies` (`movie_id`, `native_name`, `english_name`, `year_made`) VALUES (1021, 'Alien', 'Alien', '1979');
 
 INSERT INTO `movie_anagrams` (`movie_id`, `anagram`) VALUES ('1021', 'Aline'), ('1021', 'Anile'), ('1021', 'Elain'), ('1021', 'Elian'), ('1021', 'Laine'), ('1021', 'Linea');
 
@@ -14,11 +14,11 @@ INSERT INTO `movie_quotes` (`movie_id`, `movie_quote_id`, `movie_quote_name`) VA
 
 INSERT INTO `movie_trivia` (`movie_id`, `trivia`) VALUES ('1021', 'The dead facehugger that Ash autopsies was made using fresh shellfish, four oysters, and a sheep kidney to re-create the internal organs.'), ('1021', 'Shredded condoms were used to create tendons of the beast\'s ferocious jaws.');
 
-INSERT INTO `people` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `image_name`, `screen_name`) VALUES (NULL, 'Wolfgang', 'Amadeus', 'Mozart', 'Male', 'wolfgang_mozart.jpg', '');
+INSERT INTO `people` (`id`, `first_name`, `middle_name`, `last_name`, `gender`, `image_name`, `screen_name`) VALUES (102, 'Wolfgang', 'Amadeus', 'Mozart', 'Male', 'wolfgang_mozart.jpg', '');
 
 INSERT INTO `people_trivia` (`people_id`, `people_trivia_id`, `people_trivia_name`) VALUES ('102', NULL, 'Mozart’s nickname was “Wolfie.”'), ('102', NULL, 'Mozart could write music before he could write words.');
 
-INSERT INTO `songs` (`song_id`, `title`, `lyrics`) VALUES (NULL, 'Eine kleine Nachtmusik', NULL);
+INSERT INTO `songs` (`song_id`, `title`, `lyrics`) VALUES (7, 'Eine kleine Nachtmusik', NULL);
 
 INSERT INTO `song_keywords` (`song_id`, `keyword`) VALUES ('7', 'allegro'), ('7', 'romanze'), ('7', 'menuetto'), ('7', 'rondo');
 
