@@ -1,3 +1,4 @@
+--Insert statements to test FK constraints and cascading deletions for iteration 9 - by Shuja Uddin
 INSERT INTO `movies` (`movie_id`, `native_name`, `english_name`, `year_made`) VALUES (1021, 'Alien', 'Alien', '1979');
 
 INSERT INTO `movie_anagrams` (`movie_id`, `anagram`) VALUES ('1021', 'Aline'), ('1021', 'Anile'), ('1021', 'Elain'), ('1021', 'Elian'), ('1021', 'Laine'), ('1021', 'Linea');
