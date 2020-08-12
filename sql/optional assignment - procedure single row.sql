@@ -1,5 +1,5 @@
---Shuja Uddin
---Procedure to process single row from mpr_test_data
+-- Shuja Uddin
+-- Procedure to process single row from mpr_test_data
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `process_mpr_single_row`(IN `nativename` VARCHAR(180), IN `yearmade` INT(4), IN `stagename` VARCHAR(30), IN `role_data` VARCHAR(20), IN `screenname` VARCHAR(30), OUT `execution_status` VARCHAR(100))
 BEGIN

@@ -42,7 +42,7 @@ END$$
 DELIMITER ;
 
 
---SQL script for processing all rows
+-- SQL script for processing all rows
 CALL import_movies_people_data(@count);
 
 SELECT @count;
