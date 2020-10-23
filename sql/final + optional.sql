@@ -57,19 +57,14 @@ BEGIN
         INSERT INTO `movies` (`movie_id`, `native_name`, `english_name`, `year_made`)
         VALUES (NULL, nativename, '', yearmade);
         
-        SELECT movies.movie_id
-        INTO movieid
-        FROM movies
-        WHERE movies.native_name = nativename AND
-      	  	  movies.year_made = yearmade;
+        SELECT last_select_id()
+        INTO movieid;
               
         INSERT INTO `people` (`id`, `stage_name`, `first_name`, `middle_name`, `last_name`, `gender`, `image_name`, `screen_name`)
         VALUES (NULL, stagename, '', '', '', '', '', screenname);
         
-        SELECT people.id
-    	INTO peopleid
-    	FROM people
-    	WHERE people.stage_name = stagename;
+        SELECT last_select_id()
+        INTO peopleid;
         
         INSERT INTO `movie_people` (`movie_people`.`movie_id`, `movie_people`.`people_id`, `movie_people`.`role`)
         VALUES (movieid, peopleid, role_data);
@@ -87,10 +82,8 @@ BEGIN
     	INSERT INTO `people` (`id`, `stage_name`, `first_name`, `middle_name`, `last_name`, `gender`, `image_name`, `screen_name`)
         VALUES (NULL, stagename, '', '', '', '', '', screenname);
                 
-        SELECT people.id
-    	INTO peopleid
-    	FROM people
-    	WHERE people.stage_name = stagename;
+        SELECT last_select_id()
+        INTO peopleid;
                 
         INSERT INTO `movie_people` (`movie_people`.`movie_id`, `movie_people`.`people_id`, `movie_people`.`role`)
         VALUES (movieid, peopleid, role_data);
@@ -102,11 +95,8 @@ BEGIN
     	INSERT INTO `movies` (`movie_id`, `native_name`, `english_name`, `year_made`)
         VALUES (NULL, nativename, '', yearmade);
         
-        SELECT movies.movie_id
-        INTO movieid
-        FROM movies
-        WHERE movies.native_name = nativename AND
-      	  	  movies.year_made = yearmade;
+        SELECT last_select_id()
+        INTO movieid;
 
         SELECT people.id
     	INTO peopleid
